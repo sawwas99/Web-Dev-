@@ -1,40 +1,35 @@
 /*CRUDCalculator.css*/
 
-  body {
-    font-family: sans-serif;
-    padding: 20px;
-  }
+*, *::before, *::after {
+  box-sizing: border-box;
+  font-family: Gotham Rounded, sans-serif;
+  font-weight: normal;
+}
   
-  h1 {
-    font-size: 40px;
-    margin-top: 0;
-    margin-bottom: 15px;
-  }
-  
-  h2 {
-    font-size: 30px;
-  }
-  
-  .established {
-    font-style: italic;
-  }
-  
-  h1, h2, p {
-    text-align: center;
-  }
-  
-  .menu {
-    width: 80%;
-    background-color: burlywood;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 20px;
-    max-width: 500px;
-  }
-  
-  img {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top:-25px;
-  }
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to right, #CBCE91FF, #EA738DFF);
+}
+
+.calculator-grid {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  /*google align attributes*/
+  min-height: 100vh;
+  grid-template-columns: repeat(4, 100px);
+  grid-template-rows: minmax(120px, auto) repeat(5, 100px);
+}
+
+.calculator-grid > button {
+  cursor: pointer;
+  font-size: 2rem;
+  border: 1px, solid #FFFFFF;
+  outline: none;
+  background-color: rbga(255, 255, 255, 0.75);
+}
+
+.calculator-grid > button:hover {
+    background-color: #a9a9a9;
+}
