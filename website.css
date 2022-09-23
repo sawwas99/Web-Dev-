@@ -1,1 +1,23 @@
-/**/
+/*Todo: Look up CSS styling guide and do through
+website changing themes*/
+
+header{
+    text-align: center
+}
+
+div{
+    background-color: gray
+}
+
+h1 {
+    font-size: 25px;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+h1, h2 {
+    text-align: center;
+}
+
+
+  
