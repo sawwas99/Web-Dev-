@@ -16,7 +16,7 @@ class Calculator{
     }
     
     delete() {
-        this.currentOperand = this.currentOperand.toString().slice(0,-1)  //convert to a string and chop off the last value of the string. from first to 2nd to last value
+        this.currentOperand = this.currentOperand.toString().slice(0,-1)  //convert to a string and chop off the last value of the string. slice from first to 2nd to last value
     }
     
     appendNumber(number) {
@@ -49,7 +49,7 @@ class Calculator{
             case '*':
                 computation = prev * current
                 break
-            case '+':
+            case '÷':
                 computation = prev / current
                 break
             default:
@@ -60,11 +60,26 @@ class Calculator{
         this.previousOperand = ''
 
     }
+
+    getDisplayNumber(number){ //TBD: add comma functionality
+        const floatNumber = parseFloat(number) //number is a string convert to a float
+        if (isNaN(floatNumber)) return ''
+        return floatNumber.toLocaleString('en') 
+    }
     
     updateDisplay() {
         //updates the display after a button is clicked
-        this.currentOperandTextElement.innerText = this.currentOperand
-        this.previousOperandTextElement.innerText = this.previousOperand
+        this.currentOperandTextElement.innerText = this.getDisplayNumber(this.currentOperand)
+        
+        if (this.operation != null){
+            this.previousOperandTextElement.innerText = `${this.getDisplayNumber(this.previousOperand)} ${this.operation}`
+
+        }
+        else {
+            this.previousOperandTextElement.innerText = ''
+        }
+         
+        //this.previousOperandTextElement.innerText = this.previousOperand 
 
     }
 }
