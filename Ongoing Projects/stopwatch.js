@@ -2,11 +2,16 @@ window.onload = function () {
 
     var seconds = 00;
     var tens = 00;
+    var minutes = 00;
+    var hours = 00;
     var appendTens = document.getElementById("tens")
     var appendSeconds = document.getElementById("seconds")
+    var appendMinutes = document.getElementById("minutes");
+    var appendHours = document.getElementById("hours");
     var buttonStart = document.getElementById('button-start');
     var buttonStop = document.getElementById('button-stop');
     var buttonReset = document.getElementById('button-reset');
+    var buttonSkip = document.getElementById('button-skip')
     var myInterval;
 
     buttonStart.onclick = function () { //clearInterval built in function, clears timer
@@ -21,6 +26,16 @@ window.onload = function () {
 
     buttonReset.onclick = function () {
         clearInterval(myInterval);
+        appendTens.innerHTML = "0" + 0;
+        appendSeconds.innerHTML = "0" + 0;
+        appendMinutes.innerHTML = "0" + 0;
+        appendHours.innerHTML = "0" + 0;
+
+    }
+
+    buttonSkip.onclick = function () {
+        minutes++;
+        appendMinutes.innerHTML = "0" + minutes;
     }
 
     function startTimer() {
@@ -41,7 +56,23 @@ window.onload = function () {
         if (seconds > 9) {
             appendSeconds.innerHTML = seconds;
         }
-    }
+        if (seconds > 60){
+            minutes++;
+            appendMinutes.innerHTML = 
+            appendMinutes.innerHTML = "0" + minutes;
+            seconds = 0;
+            appendSeconds.innerHTML = "0" + 0;
+        }
+        if (minutes > 9) {
+            appendMinutes.innerHTML = minutes;
+        }
+        if (minutes > 60){
+            hours++;
+            appendHours.innerHTML = "0" + hours;
+            minutes = 0;
+            appendMinutes.innerHTML = "0" + 0;
+        }
 
+    }
 
 }
