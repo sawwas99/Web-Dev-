@@ -1,0 +1,131 @@
+Basic Javascript
+
+
+Comment is //insert comment here 
+Multiline comment is /*insert comment here*/
+
+Variable types: undefined, null, boolean, string, symbol, bigint, number, object
+Declaration types: var (never used), const (immutable), let
+
+
+Operators
+
+Strings- can be declared with '' quotes or ""
+When variables are first declared they have a value of undefined. Math will result in NaN (not a number)
+
+Remainder- %
+Math + Assignment operator- +=, -=, *=, /=
+
+
+String Exceptions
+
+Literal Quotes in strings- const sampleStr = "Alan said, \"Peter is learning JavaScript\".";
+Code  Output
+\'	single quote
+\"	double quote
+\\	backslash
+\n	newline
+\t	tab
+\r	carriage return
+\b	word boundary
+\f	form feed
+
+//You can insert variables into strings with + 
+
+
+Finding values in Strings(arrays)
+
+.length property returns the number of characters in a string
+Bracket notation [i] also works
+Strings are immutable
+Last letter of a string - const lastLetter = firstName[firstName.length - 1];
+
+
+Arrays- storing multiple values in one variable, declared with []
+You can also nest arrays const teams = [["Bulls", 23], ["White Sox", 45]]; (multidimensional arrays)
+Accessed with indexes
+
+Arrays are mutable and can be changed even with const declarations. 
+Appending and removing data from arrays- push(), pop() (removes end), shift(), and unshift() (unshift adds to beginning)
+
+
+Functions and Scope 
+
+Local scope are functions declared in a function, only visible in the function
+Global scope variables declared without let and const are all global
+
+Local takes priority over Global.
+
+Functions can be used to mutate global variables without returning a value
+You can assign a functions return value to a variable- ourSum = sum(5, 12);
+
+Comparison Operator == - returns true if both values are equal else false, does automatic type conversion
+Strict Comparison operator === - does not do type conversion
+also has inequality and strict inequality
+
+
+A switch statement tests a value and can have many case statements which define various possible values. Statements are executed from the first matched case value until a break is encountered.
+
+switch (lowercaseLetter) {
+  case "a":
+    console.log("A");
+    break;
+  case "b":
+    console.log("B");
+    break;
+
+    ...
+  default:
+    defaultStatement;
+    break;
+}
+
+Multiple identical options switch example
+
+let result = "";
+switch (val) {
+  case 1:
+  case 2:
+  case 3:
+    result = "1, 2, or 3";
+    break;
+  case 4:
+    result = "4 alone";
+}
+
+Return the value directly
+function isEqual(a, b) {
+  return a === b;
+}
+
+
+Objects
+
+Objects are similar to arrays, except that instead of using indexes to access and modify their data, you access the data in objects through what are called properties.
+if your object has any non-string properties, JavaScript will automatically typecast them as strings.
+const cat = {
+  "name": "Whiskers",
+  "legs": 4,
+  "tails": 1,
+  "enemies": ["Water", "Dogs"]
+};
+
+Accessing object properties: 2 methods . notation and []  notation 
+const prop2val = myObj.prop2;
+myObj['More Space'];
+
+you can also use bracket notation to access property which is stores as the value of a variable 
+const dogs = {
+  Fido: "Mutt",
+  Hunter: "Doberman",
+  Snoopie: "Beagle"
+};
+
+const myDog = "Hunter";
+const myBreed = dogs[myDog];
+console.log(myBreed);
+//The string Doberman would be displayed in the console.
+
+delete keyword used to remove properties, add and modify properties normally
+
+

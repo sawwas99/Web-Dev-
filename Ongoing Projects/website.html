@@ -9,13 +9,29 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <link href="website.css" rel="stylesheet">
-  <script src="stopwatch.js"></script>
+  <script src="temp.js"></script>
 </head>
 
 <body>
 
   <!-- Navbar -->
-
+  <header>
+    <h1 class="logo">Logo</h1>
+    <input type="checkbox" id="nav-toggle" class="nav-toggle">
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+    <label for="nav-toggle" class="nav-toggle-label">
+      <span></span>
+    </label>
+  </header>
+  
+  <!--
   <div class="w3-top">
     <div class="w3-bar w3-black w3-card">
       <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)"
@@ -36,19 +52,21 @@
           class="fa fa-search"></i></a>
     </div>
   </div>
+  -->
+
   <!-- Navbar End -->
+
+
 
   <div>
     <header>
-      <h1>Coding Portfolio <sub>by David Song</sub></h1>
       <!--Updated date here-->
     </header>
     <hr>
     <main>
-      <h2>Main Content</h2>
       <p>This is a portfolio dedicated to showing my projects</p>
       <section>
-        <h1>Projects</h1>
+        <p>Projects</p>
         <article class="item">
           <p class="test">Calculator</p>
           <p class="description">Functionality complete, TBD design and stateful database</p>
@@ -62,6 +80,10 @@
           <p class="description">N/A</p>
         </article>
       </section>
+
+
+
+
 
       <div class="wrapper">
         <h1>Stopwatch</h1>
@@ -86,11 +108,10 @@
       <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js" crossorigin></script>
 
       <!-- Load our React component. -->
-      <script src="website.js"></script>
       <p>
         <a href="https://www.freecodecamp.org" target="_blank">Visit our website</a>
       </p>
-      <p class="address">Test Address</p>
+      <p class="address">Home Address</p>
     </footer>
 
 
