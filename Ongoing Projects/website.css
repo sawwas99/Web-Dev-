@@ -1,5 +1,4 @@
-/*Todo: Look up CSS styling guide and do through
-website changing themes*/
+/*website changing themes*/
 
 /*ruleset*/
 @import url('https://fonts.googleapis.com/css?family=Work+Sans:300,600');
@@ -206,6 +205,15 @@ nav a:hover {
     color:blue;
 }
 
+.title{
+  margin-top: 100px;
+
+}
+
+.dark-mode {
+  background-color: black;
+  color: white;
+}
 
 /*Colors
 .w3-amber,.w3-hover-amber:hover{color:#000!important;background-color:#ffc107!important}
