@@ -204,15 +204,51 @@ nav a:hover {
 .item:hover{
     color:blue;
 }
-
-.title{
+.margin{
   margin-top: 100px;
-
 }
-
+main{
+  margin-left: 50px;
+}
 .dark-mode {
   background-color: black;
   color: white;
+}
+.w3-border-aqua,.w3-hover-border-aqua:hover{
+  border-color:#00ffff!important;
+  background-color: #00ffff;
+}
+
+#clockanalog {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background-color: #f4f4f4;
+  position: relative;
+  margin: 50px auto;
+}
+
+#clock-face {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.hand {
+  width: 2px;
+  height: 100%;
+  background-color: black;
+  position: absolute;
+  top: 50%;
+  transform-origin: 100% 50%;
+}
+
+.hour-hand {
+  width: 5px;
+}
+
+.minute-hand {
+  width: 3px;
 }
 
 /*Colors

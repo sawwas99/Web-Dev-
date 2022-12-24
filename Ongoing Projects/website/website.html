@@ -13,15 +13,14 @@
 </head>
 
 <body>
-
   <!-- Navbar -->
   <header>
-    <h1 class="logo">Logo</h1>
+    <h1 class="logo">Demo</h1>
     <input type="checkbox" id="nav-toggle" class="nav-toggle">
     <nav>
       <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
+        <li><a href="website.html">Home</a></li>
+        <li><a href="aboutpage.html">About</a></li>
         <li><a href="#">Blog</a></li>
         <li><a href="#">Contact</a></li>
       </ul>
@@ -56,17 +55,14 @@
 
   <!-- Navbar End -->
 
-
-
   <div>
     <hr>
-    <main>
+    <main class = "margin">
 
        <!--Updated date here-->
       <!-- Dark Mode Switch -->
-      <h3 class = "title">Toggle Dark Mode/Light mode</h3>
-      <button onclick="darkmode()">Toggle dark mode</button>
-      <p class="title">This is a portfolio dedicated to showing my projects</p>
+      <button onclick="darkmode()">Toggle dark mode/light mode</button>
+      <p>This is a portfolio dedicated to showing my projects</p>
       <section>
         <p>Projects</p>
         <article class="item">
@@ -83,11 +79,7 @@
         </article>
       </section>
 
-
-
-
-
-      <div class="wrapper">
+      <div class="stopwatch">
         <h1>Stopwatch</h1>
         <h2>Vanilla JavaScript Stopwatch</h2>
         <p><span id = "hours">00</span><span>:</span><span id ="minutes">00</span><span>:</span><span id="seconds">00</span>:<span id="tens">00</span></p>
@@ -96,10 +88,24 @@
         <button id="button-reset">Reset</button>
       </div>
 
+      <div class="margin" id="clock"></div>
+
+
+      <div id="clockanalog">
+        <div id="clock-face">
+          <div class="hand hour-hand"></div>
+          <div class="hand minute-hand"></div>
+          <div class="hand second-hand"></div>
+        </div>
+      </div>
 
     </main>
+
+    
+
+
     <hr class="bottom-line">
-    <footer>
+    <footer class = "w3-border-aqua">
 
       <!--React section-->
 
