@@ -196,6 +196,8 @@ nav a:hover {
     transform: scale(1,1);
   }
 }
+/*nav end*/
+
 
 .item {
     text-align: center;
@@ -210,45 +212,78 @@ nav a:hover {
 main{
   margin-left: 50px;
 }
+/* dark mode */
 .dark-mode {
   background-color: black;
   color: white;
 }
+
+
+/* footer design*/
 .w3-border-aqua,.w3-hover-border-aqua:hover{
   border-color:#00ffff!important;
   background-color: #00ffff;
 }
 
-#clockanalog {
-  width: 300px;
-  height: 300px;
-  border-radius: 50%;
-  background-color: #f4f4f4;
-  position: relative;
-  margin: 50px auto;
+
+/*analog clock*/
+/*temp
+html {
+  background: #282828;
+  text-align: center;
+  font-size: 10px;
 }
 
-#clock-face {
+
+body {
+  margin: 0;
+  font-size: 2rem;
+  display: flex;
+  flex: 1;
+  min-height: 100vh;
+  align-items: center;
+}
+*/
+.clockanalog {
+  width: 30rem;
+  height: 30rem;
+  position: relative;
+  padding: 2rem;
+  border: 7px solid #282828;
+  box-shadow: -4px -4px 10px rgba(67,67,67,0.5),
+                inset 4px 4px 10px rgba(0,0,0,0.5),
+                inset -4px -4px 10px rgba(67,67,67,0.5),
+                4px 4px 10px rgba(0,0,0,0.3);
+  border-radius: 50%;
+  margin: 50px auto;
+
+}
+
+.outer-clock-face {
+  position: relative;
+  background: #282828;
+  overflow: hidden;
   width: 100%;
   height: 100%;
-  position: relative;
+  border-radius: 100%;
 }
 
-.hand {
-  width: 2px;
-  height: 100%;
-  background-color: black;
+.outer-clock-face::after {
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  transform: rotate(90deg)
+}
+
+.outer-clock-face::after,
+.outer-clock-face::before,
+.outer-clock-face .marking{
+  content: '';
   position: absolute;
-  top: 50%;
-  transform-origin: 100% 50%;
-}
-
-.hour-hand {
   width: 5px;
-}
-
-.minute-hand {
-  width: 3px;
+  height: 100%;
+  background: #1df52f;
+  z-index: 0;
+  left: 49%;
 }
 
 /*Colors

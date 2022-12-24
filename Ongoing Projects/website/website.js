@@ -93,29 +93,10 @@ function updateClock() {
     var timeString = hours + ":" + minutes + ":" + seconds;
 
     // Update the clock div with the current time
-    document.getElementById("clock").innerHTML = timeString;
+    document.getElementById("digitalclock").innerHTML = timeString;
   }
 
   // Update the clock every second
   setInterval(updateClock, 1000);
 
-  function updateanalogClock() {
-    // Get the current time
-    var date = new Date();
-    var hours = date.getHours();
-    var minutes = date.getMinutes();
-    var seconds = date.getSeconds();
-
-    // Calculate the angles for the hands
-    var hourAngle = (hours / 12) * 360;
-    var minuteAngle = (minutes / 60) * 360;
-    var secondAngle = (seconds / 60) * 360;
-
-    // Update the rotation of the hands
-    document.querySelector(".hour-hand").style.transform = "rotate(" + hourAngle + "deg)";
-    document.querySelector(".minute-hand").style.transform = "rotate(" + minuteAngle + "deg)";
-    document.querySelector(".second-hand").style.transform = "rotate(" + secondAngle + "deg)";
-  }
-
-  // Update the clock every second
-  setInterval(updateanalogClock, 1000);
+  
